@@ -1,2 +1,2 @@
 # DataCommander
-Database submodule for the suite of Commander apps
+Database submodule for the suite of Commander apps.
