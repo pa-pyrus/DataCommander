@@ -182,8 +182,9 @@ class UberAccount(Base):
 class LeaderBoardEntry(Base):
     __tablename__ = "leaderboard"
 
-    league = Column(Enum("Uber", "Platinum", "Gold", "Silver", "Bronze"),
-                    primary_key=True, name="league")
+    league = Column(Enum("Uber", "Platinum", "Gold", "Silver", "Bronze",
+                         name="league_enum"),
+                    primary_key=True)
     rank = Column(SmallInteger, nullable=False, primary_key=True)
     uid = Column(String, ForeignKey("uberaccount.uid"), nullable=False)
     last = Column(DateTime, nullable=False)
