@@ -4,7 +4,7 @@
 """
 models.py: Model definitions for the Commander suite of services.
 
-Copyright (c) 2015 Pyrus <pyrus@coffee-break.at>
+Copyright (c) 2015 Pyrus <pyrus at coffee dash break dot at>
 See the file LICENSE for copying permission.
 """
 
