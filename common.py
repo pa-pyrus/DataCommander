@@ -12,8 +12,9 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 from sqlalchemy import create_engine
-from os import environ
-engine = create_engine(environ["DATABASE_URL"])
+from os import getenv
+DATABASE_URL = getenv("DATABASE_URL", "sqlite://")
+engine = create_engine(DATABASE_URL)
 
 from sqlalchemy.orm import sessionmaker
 Session = sessionmaker(bind=engine)
