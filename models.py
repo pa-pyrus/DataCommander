@@ -2,7 +2,10 @@
 # vim:fileencoding=utf-8:ts=8:et:sw=4:sts=4:tw=79
 
 """
-models.py: Model definitions for the Commander suit of services.
+models.py: Model definitions for the Commander suite of services.
+
+Copyright (c) 2015 Pyrus <pyrus@coffee-break.at>
+See the file LICENSE for copying permission.
 """
 
 from .common import Base

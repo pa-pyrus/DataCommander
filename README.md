@@ -9,3 +9,7 @@ Database submodule for the Commander suite of services.
 1. Add the submodule to a project of your choice.
 2. Set the environment variable DATABASE_URL to a database URL understood by SQLAlchemy.
 3. Use `Session` and/or `engine` as provided by the module.
+
+## License ##
+Copyright (c) 2015 Pyrus <pyrus@coffee-break.at>  
+See the file LICENSE for copying permission.

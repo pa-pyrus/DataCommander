@@ -3,6 +3,9 @@
 
 """
 common.py: Common objects used by the package and its users.
+
+Copyright (c) 2015 Pyrus <pyrus@coffee-break.at>
+See the file LICENSE for copying permission.
 """
 
 from sqlalchemy.ext.declarative import declarative_base
