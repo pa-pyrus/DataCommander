@@ -182,6 +182,8 @@ class UberAccount(Base):
 class LeaderBoardEntry(Base):
     __tablename__ = "leaderboard"
 
+    game = Column(Enum("Vanilla", "Titans", name="game_enum"),
+                  primary_key=True)
     league = Column(Enum("Uber", "Platinum", "Gold", "Silver", "Bronze",
                          name="league_enum"),
                     primary_key=True)
@@ -189,12 +191,18 @@ class LeaderBoardEntry(Base):
     uid = Column(String, ForeignKey("uberaccount.uid"), nullable=False)
     last = Column(DateTime, nullable=False)
 
-    def __init__(self, league, rank, uid, last):
+    def __init__(self, game, league, rank, uid, last):
+        self.game = game
         self.league = league
         self.rank = rank
         self.uid = uid
         self.last = last
 
     def __repr__(self):
-        return ("<LeaderBoardEntry(League={0}, Rank={1}, UberId={2})".format(
-            self.league, self.rank, self.uid))
+        template = ("<LeaderBoardEntry("
+                    "Game={0}, "
+                    "League={1}, "
+                    "Rank={2}, "
+                    "UberId={3})")
+
+        return template.format(self.game, self.league, self.rank, self.uid)
