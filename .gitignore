@@ -3,4 +3,4 @@ __pycache__/
 *.py[cod]
 
 # Distribution / packaging
-env/
+venv/
